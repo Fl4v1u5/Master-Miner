@@ -1,6 +1,8 @@
 #pragma once
 
 #include <fstream>
+#include <iostream>
+#include <windows.h>
 
 using namespace std;
 
@@ -16,7 +18,7 @@ typedef struct {
 	short posX, posY;
 } tMine;
 
-void load_Mine(ifstream& file, tMine& mine);
+void load_mine(ifstream& file, tMine& mine);
 
 void draw1_1(const tMine& mine);
 
@@ -25,3 +27,7 @@ void draw1_3(const tMine& mine);
 void draw3x3(tTile tile, tCharPlane charplane, tColorsPlane colorsPlane, short i, short j);
 
 tTile chartotile(char c);
+
+char tiletochar(tTile t);
+
+void bgroundColor(int color);
